@@ -8,14 +8,14 @@ myConsole.log=function(arg){
 console=myConsole;*/
 
 let tmp;
-tmp = window.console;
+tmp = window.console.log;
 const myConsole = {};
 myConsole.log = function(){
     let join = [].join;
-    tmp.log(...arguments);
+    tmp(...arguments);
     localStorage.setItem('fromConsole', join.call(arguments, "; ") );
 }
 
-console=myConsole;
+console.log=myConsole.log;
 
 console.log("1", window, 5, 6, 7, 8);
