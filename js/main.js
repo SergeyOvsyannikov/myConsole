@@ -14,9 +14,8 @@ myConsole.log = function(){
     let join = [].join;
     tmp.log(...arguments);
     localStorage.setItem('fromConsole', join.call(arguments, "; ") );
-
 }
 
 console=myConsole;
 
-console.log("1", window);
+console.log("1", window, 5, 6, 7, 8);
